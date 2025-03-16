@@ -10,70 +10,15 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Header from "@/components/header/header"
+import Footer from "@/components/footer/footer"
 
 export default function BrowsePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/">
-              <Image
-                src="/assets/Store Logo.png"
-                alt="Thrift Store Logo"
-                width={250}
-                height={150}
-                className="rounded"
-                priority
-              />
-            </Link>
-
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <Link href="/browse" className="text-sm font-medium text-blue-600">
-              Browse
-            </Link>
-            <Link href="/sell" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Sell
-            </Link>
-            <Link href="/bids" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Bids
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              About
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:flex">
-              Log In
-            </Button>
-            <Button className="hidden md:flex bg-blue-600 hover:bg-blue-700">Sign Up</Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
-        <div className="container py-8">
+        <div className="container mx-auto py-8 px-6">
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -311,116 +256,7 @@ export default function BrowsePage() {
           </div>
         </div>
       </main>
-      <footer className="border-t bg-gray-50">
-        <div className="container py-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Image
-                  src="/assets/Store Logo.png"
-                  alt="Thrift Store Logo"
-                  width={250}
-                  height={150}
-                  className="rounded"
-                  priority
-                />
-                <span className="text-xl font-bold text-blue-600">Thrift Store</span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                The premier marketplace for college students to buy and sell second-hand items.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/browse" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Browse Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/sell" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Sell an Item
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/bids" className="text-sm text-muted-foreground hover:text-blue-600">
-                    My Bids
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Categories</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/category/books" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Books & Notes
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/category/electronics" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Electronics
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/category/cycles" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Cycles
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/category/hostel" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Hostel Essentials
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Help & Support</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/about" className="text-sm text-muted-foreground hover:text-blue-600">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/faq" className="text-sm text-muted-foreground hover:text-blue-600">
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/safety" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Safety Tips
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-sm text-muted-foreground hover:text-blue-600">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-              © {new Date().getFullYear()} Thrift Store. All rights reserved.
-            </p>
-            <div className="flex space-x-4">
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-blue-600">
-                Terms of Service
-              </Link>
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-blue-600">
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
