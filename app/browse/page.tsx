@@ -27,7 +27,7 @@ export default function BrowsePage() {
                 priority
               />
             </Link>
-            <span className="text-xl font-bold text-blue-600">Thrift Store</span>
+
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
