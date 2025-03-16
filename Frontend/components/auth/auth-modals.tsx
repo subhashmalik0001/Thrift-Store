@@ -7,7 +7,7 @@ import { Mail, Lock, User, Eye, EyeOff } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-import { Button } from "@/Frontend/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Input } from "@/Frontend/components/ui/input"
 import { Label } from "@/Frontend/components/ui/label"
 import { Checkbox } from "@/Frontend/components/ui/checkbox"
