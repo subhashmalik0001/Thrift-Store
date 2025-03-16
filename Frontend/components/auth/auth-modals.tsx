@@ -8,9 +8,9 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/Frontend/components/ui/input"
-import { Label } from "@/Frontend/components/ui/label"
-import { Checkbox } from "@/Frontend/components/ui/checkbox"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Checkbox } from "@/components/ui/checkbox"
 import {
   Dialog,
   DialogContent,
@@ -18,9 +18,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from "@/Frontend/components/ui/dialog"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Frontend/components/ui/tabs"
-import { Separator } from "@/Frontend/components/ui/separator"
+} from "@/components/ui/dialog"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Separator } from "@/components/ui/separator"
 
 export function AuthModals() {
   const [loginOpen, setLoginOpen] = useState(false)
