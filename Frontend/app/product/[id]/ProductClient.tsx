@@ -22,6 +22,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import Header from "@/components/header/header"
+import Footer from "@/components/footer/footer"
 
 interface Product {
   id: string
@@ -71,57 +73,9 @@ export default function ProductClient({ product }: ProductClientProps) {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/">
-              <Image
-                src="/assets/Store Logo.png"
-                alt="Thrift Store Logo"
-                width={250}
-                height={150}
-                className="rounded"
-                priority
-              />
-            </Link>
-            <span className="text-xl font-bold text-blue-600">Thrift Store</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <Link href="/browse" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Browse
-            </Link>
-            <Link href="/sell" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Sell
-            </Link>
-            <Link href="/bids" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Bids
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              About
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              className="hidden md:flex"
-              onClick={() => window.dispatchEvent(new CustomEvent("open-login"))}
-            >
-              Log In
-            </Button>
-            <Button
-              className="hidden md:flex bg-blue-600 hover:bg-blue-700"
-              onClick={() => window.dispatchEvent(new CustomEvent("open-signup"))}
-            >
-              Sign Up
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1 py-8">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="mb-6">
             <Link
               href="/browse"
@@ -323,6 +277,7 @@ export default function ProductClient({ product }: ProductClientProps) {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 } 
